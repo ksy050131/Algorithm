@@ -6,12 +6,11 @@ n, m = map(int, input().split())
 
 visited = (n + 1) * [False]
 elem = []
-# elemlist = []
+elemlist = []
 
 def dfs(depth: int):
     if depth == m:
-        print(*elem)
-        # elemlist.append(' '.join(map(str, elem)))
+        elemlist.append(' '.join(map(str, elem)))
         return
 
     for i in range(1, n + 1):
@@ -20,4 +19,4 @@ def dfs(depth: int):
         elem.pop()
 
 dfs(0)
-# print('\n'.join(elemlist))
+print('\n'.join(elemlist))
